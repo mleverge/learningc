@@ -6,5 +6,5 @@ def MSD(x, y) :
 		b[k], d[k] = np.roll(b[k], -k), np.roll(d[k], -k)
 	m = np.sqrt( (b-a)*(b-a) + (c-d)*(c-d))
 	for k in range(n) :
-		print m[-k:]
+		m[k, -k:] = np.zeros(k)
 	return m
